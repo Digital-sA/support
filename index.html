@@ -484,92 +484,137 @@
       resize: vertical;
     }
     
-    /* Footer */
+    /* Footer Styles */
     footer {
-      background-color: var(--dark);
-      color: white;
-      padding: 3rem 0 1rem;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      padding: 4rem 0 1rem;
+      font-size: 0.95rem;
     }
-    
+
     .footer-content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 3rem;
     }
-    
-    .footer-column h3 {
-      font-size: 1.2rem;
+
+    .footer-column {
       margin-bottom: 1.5rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo i {
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: white;
       position: relative;
       padding-bottom: 10px;
     }
-    
+
     .footer-column h3::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 50px;
-      height: 2px;
+      width: 40px;
+      height: 3px;
       background-color: var(--accent);
+      border-radius: 3px;
     }
-    
-    .footer-column ul {
-      list-style-type: none;
+
+    .footer-column p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: #94a3b8;
     }
-    
-    .footer-column li {
+
+    .footer-menu {
+      list-style: none;
+    }
+
+    .footer-menu li {
       margin-bottom: 0.8rem;
+    }
+
+    .footer-menu a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-menu a:hover {
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .footer-menu i {
+      font-size: 0.7rem;
+      color: var(--accent);
+    }
+
+    .contact-info {
+      list-style: none;
+    }
+
+    .contact-info li {
+      margin-bottom: 1rem;
       display: flex;
       align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
     }
-    
-    .footer-column i {
-      margin-right: 0.8rem;
+
+    .contact-info i {
       color: var(--accent);
       margin-top: 3px;
     }
-    
-    .footer-column a {
-      color: #cbd5e1;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-column a:hover {
-      color: white;
-    }
-    
+
     .social-links {
       display: flex;
       gap: 1rem;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
-    
+
     .social-links a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      background-color: #334155;
+      width: 38px;
+      height: 38px;
+      background-color: #1e293b;
       border-radius: 50%;
       color: white;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
+      font-size: 1rem;
     }
-    
+
     .social-links a:hover {
       background-color: var(--accent);
       transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    
+
     .copyright {
       text-align: center;
       padding-top: 2rem;
-      border-top: 1px solid #334155;
-      color: #94a3b8;
-      font-size: 0.9rem;
+      border-top: 1px solid #1e293b;
+      color: #64748b;
+      font-size: 0.85rem;
     }
     
     /* Responsive Design */
@@ -616,6 +661,15 @@
         display: block;
         width: 80%;
         margin: 0.5rem auto;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .footer-column {
+        margin-bottom: 2rem;
       }
     }
     
@@ -747,8 +801,6 @@
     </div>
   </section>
   
-  
-  
   <section class="about" id="about">
     <div class="container">
       <div class="about-content">
@@ -782,49 +834,54 @@
           <i class="fab fa-whatsapp"></i> WhatsApp Us
         </a>
       </div>
-      
-
-
+    </div>
   </section>
   
   <footer>
     <div class="container">
       <div class="footer-content">
-<div class="footer-column">
-  <h3>Digital SA</h3>
-  <p>Your comprehensive digital partner for career, technology, and business solutions in Johannesburg.</p>
-  <div class="social-links">
-    <a href="https://www.facebook.com/profile.php?id=61577171795135&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.linkedin.com/company/digital-sa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://www.instagram.com/digital_sa_desk1?igsh=ZGUzMzM3NWJiOQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/+27685753002" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.tiktok.com/@digital_sa5?_t=ZM-8xdUIkP6NAT&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-  </div>
-</div>
+        <!-- First Column - About -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-rocket"></i>
+            <h3>Digital SA</h3>
+          </div>
+          <p>Your comprehensive digital partner for career, technology, and business solutions in Johannesburg.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61577171795135&mibextid=ZbWKwL" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/digital-sa" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/digital_sa_desk1?igsh=ZGUzMzM3NWJiOQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/+27685753002" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@digital_sa5?_t=ZM-8xdUIkP6NAT&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
         
+        <!-- Second Column - Quick Links -->
         <div class="footer-column">
           <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul class="footer-menu">
+            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
           </ul>
         </div>
         
+        <!-- Third Column - Services -->
         <div class="footer-column">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#services">Career Branding</a></li>
-            <li><a href="#services">Web Development</a></li>
-            <li><a href="#services">Business Branding</a></li>
-            <li><a href="#services">IT Support</a></li>
+          <h3>Our Services</h3>
+          <ul class="footer-menu">
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Career Branding</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Business Branding</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> IT Support</a></li>
           </ul>
         </div>
         
+        <!-- Fourth Column - Contact -->
         <div class="footer-column">
-          <h3>Contact</h3>
-          <ul>
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
             <li><i class="fas fa-map-marker-alt"></i> 471 Hole in one, Rumsig, Roodepoort</li>
             <li><i class="fas fa-phone"></i> +27 82 969 9191</li>
             <li><i class="fas fa-envelope"></i> digitalsadesk@gmail.com</li>
@@ -863,27 +920,6 @@
         }
       });
     });
-    
-    // Form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-        
-        // Here you would typically send the data to a server
-        // For this example, we'll just show an alert
-        alert(`Thank you, ${name}! Your message about ${service || 'our services'} has been received. We'll contact you at ${email} shortly.`);
-        
-        // Reset the form
-        contactForm.reset();
-      });
-    }
     
     // Animation on scroll
     const animateOnScroll = () => {

@@ -241,6 +241,9 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.05);
       transition: transform 0.3s, box-shadow 0.3s;
       border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
     
     .service-card:hover {
@@ -258,6 +261,9 @@
     
     .service-content {
       padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
     
     .service-content h3 {
@@ -269,6 +275,7 @@
     .service-content ul {
       list-style-type: none;
       margin-bottom: 1.5rem;
+      flex-grow: 1;
     }
     
     .service-content li {
@@ -288,6 +295,11 @@
       color: var(--success);
     }
     
+    .service-card .btn {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
     /* About Section */
     .about {
       padding: 5rem 0;
@@ -743,6 +755,7 @@
               <li>LinkedIn Profile Optimization</li>
               <li>Portfolio Website Creation</li>
             </ul>
+            <a href="career-services.html" class="btn">Learn More</a>
           </div>
         </div>
         
@@ -761,6 +774,7 @@
               <li>Business sites & portfolios</li>
               <li>Blogs & landing pages</li>
             </ul>
+            <a href="web-development.html" class="btn">Learn More</a>
           </div>
         </div>
         
@@ -777,6 +791,7 @@
               <li>Brand and Marketing Design</li>
               <li>Social Media Branding</li>
             </ul>
+            <a href="business-branding.html" class="btn">Learn More</a>
           </div>
         </div>
         
@@ -795,7 +810,27 @@
               <li>Network Troubleshooting</li>
               <li>VPN & Privacy Solutions</li>
             </ul>
+            <a href="it-support.html" class="btn">Learn More</a>
           </div>         
+        </div>
+
+        <!-- AWS Cloud & DevOps -->
+        <div class="service-card fade-in delay-2">
+          <div class="service-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <div class="service-content">
+            <h3>AWS Cloud & DevOps</h3>
+            <ul>
+              <li>Cloud Strategy & Consultation</li>
+              <li>Cloud Migration Services</li>
+              <li>DevOps Implementation</li>
+              <li>Infrastructure as Code (IaC)</li>
+              <li>Generative AI Solutions</li>
+              <li>Managed AWS Services</li>
+            </ul>
+            <a href="aws-devops.html" class="btn">Learn More</a>
+          </div>
         </div>
 
         <!-- ATS Checker -->
@@ -843,7 +878,6 @@
     background-color: #0acabf;
   }
 </style>
-
 
         
       </div>
@@ -974,7 +1008,6 @@
     const animateOnScroll = () => {
       const elements = document.querySelectorAll('.fade-in');
       
-      elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
         
@@ -1001,8 +1034,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
